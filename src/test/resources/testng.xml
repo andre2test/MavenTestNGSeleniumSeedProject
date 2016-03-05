@@ -1,0 +1,8 @@
+<suite name="Sample Build Suite">
+	<test name="Sample Build test">
+		<classes>
+			<class name="com.selvi.tests.AppTest" />
+			<class name="com.selvi.tests.AmazonTest" />
+		</classes>
+	</test>
+</suite>
