@@ -2,7 +2,7 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.selvi.tests</groupId>
+    <groupId>com.locoman.tests</groupId>
     <artifactId>myapp-selenium-tests</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
@@ -11,11 +11,13 @@
     <url>http://maven.apache.org</url>
 
     <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <testng.version>6.3</testng.version>
-        <selenium.version>2.43.0</selenium.version>
-        <surefire.version>2.11</surefire.version>
-        <maven.compiler.version>3.1</maven.compiler.version>
+        <maven.compiler.source>19</maven.compiler.source>
+        <maven.compiler.target>19</maven.compiler.target>
+        <java.version>19</java.version>
+        <testng.version>7.8.0</testng.version>
+        <selenium.version>4.13.0</selenium.version>
+        <surefire.version>3.1.2</surefire.version>
+        <maven.compiler.version>3.11.0</maven.compiler.version>
     </properties>
 
     <dependencies>
@@ -27,23 +29,26 @@
       <dependency>
           <groupId>org.seleniumhq.selenium</groupId>
           <artifactId>selenium-java</artifactId>
-          <version>2.52.0</version>
+          <version>${selenium.version}</version>
+          <scope>test</scope>
       </dependency>
 	     <dependency>
         <groupId>org.seleniumhq.selenium</groupId>
         <artifactId>selenium-firefox-driver</artifactId>
-        <version>2.52.0</version>
+        <version>${selenium.version}</version>
     </dependency> 
     </dependencies>
 
     <build>
         <plugins>
             <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>${maven.compiler.version}</version>
                 <configuration>
-                    <source>1.7</source>
-                    <target>1.7</target>
+                    <encoding>UTF-8</encoding>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
                 </configuration>
             </plugin>
             <plugin>

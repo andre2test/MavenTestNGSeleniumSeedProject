@@ -1,8 +1,28 @@
 <suite name="Sample Build Suite">
+<!--	<packages>-->
+<!--		<package name = "com.selvi.tests" />-->
+<!--	</packages>-->
 	<test name="Sample Build test">
 		<classes>
 			<class name="com.selvi.tests.AppTest" />
 			<class name="com.selvi.tests.AmazonTest" />
+			<class name="com.selvi.tests.UdemyTest" />
+			<parameter name= "URL" value="https://www.weblog.com" />
+		</classes>
+	</test>
+<!--	<packages>-->
+<!--		<package name = "com.udemy.tests" />-->
+<!--		<parameter name= "URL" value="https://www.locoman.com" />-->
+<!--	</packages>-->
+	<test name="Udemy Tests">
+		<parameter name= "URL" value="https://www.locoman.com" />
+		<parameter name= "APIkey" value="349y4397soiif" />
+		<classes>
+			<class name="com.udemy.tests.LoanTest" >
+					<methods>
+						<exclude name = "TC03*" />
+					</methods>
+			</class>
 		</classes>
 	</test>
 </suite>

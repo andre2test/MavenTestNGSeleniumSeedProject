@@ -1,0 +1,22 @@
+<suite name="Mobile Regression Suite">
+	<packages>
+		<package name = "com.udemy.tests" />
+	</packages>
+	<test name="Mobile Udemy Regression test">
+		<groups>
+			<run>
+				<include name = "Smoke" />
+			</run>
+		</groups>
+	</test>
+	<packages>
+		<package name = "com.selvi.tests" />
+	</packages>
+	<test name="Mobile Selvi Regression test">
+		<groups>
+			<run>
+				<include name = "Smoke" />
+			</run>
+		</groups>
+	</test>
+</suite>
